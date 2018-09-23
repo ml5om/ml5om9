@@ -14,7 +14,7 @@ client.on('ready', () => {
   console.log('---------------')
 });
 
-const prefix = "9"
+const prefix = "!"
 client.on('message', async msg => {
 	if (msg.author.bot) return undefined;
 	
@@ -270,7 +270,7 @@ client.on('message', function(message) {
     } else if(message.content.startsWith(prefix + "stream")) {
 		        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setGame(args , 'https://www.twitch.tv/eviiiiiiil');
+        client.user.setGame(args , 'https://www.twitch.tv/rakanoolive');
         message.channel.send(':white_check_mark: Done!').then(msg => {
            msg.delete(5000);
           message.delete(5000);
@@ -315,7 +315,7 @@ client.on('message', function(message) {
 
 client.on('message', async message => {
             if(!message.channel.guild) return;
-             if (message.content.startsWith("9")) {
+             if (message.content.startsWith("!")) {
 let args = message.content.split(' ').slice(1).join(' ');
             let sigMessage = await args;
             
